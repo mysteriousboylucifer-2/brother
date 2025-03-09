@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Wish</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .message {
+            font-size: 3vw; /* Responsive text size */
+            border-right: 3px solid white;
+            overflow: hidden;
+            max-width: 80%;
+            text-shadow: 0 0 10px #00c3ff, 0 0 20px #007bff, 0 0 30px #00c3ff;
+            animation: typing 6s steps(40, end) forwards, blink 0.8s infinite;
+            display: inline-block;
+            white-space: normal; /* Allows text to wrap */
+            word-wrap: break-word; /* Ensures long words break */
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes blink {
+            50% { border-color: transparent; }
+        }
+
+        /* Force Landscape Mode */
+        @media screen and (max-width: 768px) and (orientation: portrait) {
+            body::before {
+                content: "Please rotate your device to landscape mode";
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: rgba(0, 0, 0, 0.8);
+                color: white;
+                font-size: 24px;
+                text-align: center;
+                padding: 20px;
+                z-index: 9999;
+                width: 80%;
+                border-radius: 10px;
+            }
+            .message {
+                display: none;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="message">Happy Birthday, Brother from Another Mother! 🎉 May your day be filled with laughter, joy, and endless memories.</div>
+</body>
+</html>
